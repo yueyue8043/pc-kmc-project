@@ -19,7 +19,7 @@
 
       <el-button type="primary" @click="login('loginFrom')">登录</el-button>
 
-      <p>尚未注册账号？<span class="toRegister" @click="toPath">注册</span></p>
+      <!-- <p>尚未注册账号？<span class="toRegister" @click="toPath">注册</span></p> -->
     </div>
   </div>
 </template>
@@ -61,7 +61,7 @@ export default {
           await this.$store.dispatch("user/login", this.loginFrom);
           this.$router.push("/");
         } else {
-          return;
+          return false;
         }
       });
     },
